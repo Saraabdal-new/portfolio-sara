@@ -3,135 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Sara Abdallah</title>
-    <style>
-        /* --- Reset & Body --- */
-        * {margin:0; padding:0; box-sizing:border-box;}
-        body {font-family: Arial, sans-serif; background-color: #0d1117; color: #c9d1d9; line-height:1.6;}
-        a {color:#58a6ff; text-decoration:none;}
-        a:hover {text-decoration:underline;}
-        
-        /* --- Navigation --- */
-        nav {
-            background-color: #161b22;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            padding: 15px 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-        }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-        nav ul li {
-            margin: 0 20px;
-            font-weight: bold;
-        }
-        nav ul li a {color:#58a6ff;}
-
-        /* --- Sections --- */
-        section {
-            padding: 100px 20px 60px;
-            max-width: 900px;
-            margin: auto;
-        }
-        h1, h2 {margin-bottom: 20px;}
-        h1 {font-size: 2.5rem; color:#58a6ff;}
-        h2 {color:#58a6ff; border-bottom:2px solid #30363d; padding-bottom:5px; margin-bottom:20px;}
-
-        /* --- Cards --- */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-            gap: 20px;
-        }
-        .card {
-            background-color: #161b22;
-            padding:20px;
-            border-radius:10px;
-            box-shadow:0 4px 10px rgba(0,0,0,0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow:0 8px 15px rgba(0,0,0,0.5);
-        }
-
-        /* --- Footer --- */
-        footer {text-align:center; padding:20px; background:#161b22; margin-top:40px; border-top:1px solid #30363d;}
-
-        /* --- Responsive --- */
-        @media(max-width:600px){
-            nav ul {flex-direction:column;}
-            nav ul li {margin:10px 0;}
-        }
-    </style>
+    <title>Portfolio — Sara Abdallah</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#home">Accueil</a></li>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">Sara Abdallah</div>
+    <ul>
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <!-- Home Section -->
-    <section id="home">
-        <h1>Portfolio — Sara Abdallah</h1>
-        <p>Étudiante en Cloud & Cybersecurity • ISTQB Certified</p>
-    </section>
+<!-- HEADER -->
+<header id="home">
+    <h1>Portfolio — Sara Abdallah</h1>
+    <p>Étudiante en Cloud & Cybersecurity • ISTQB Certified</p>
+</header>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projets</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Projet Cloud</h3>
-                <p>Déploiement d’un site statique sur AWS S3 + CloudFront.</p>
-                <p>Tech : AWS, Terraform</p>
-                <p>🔗 <a href="#">Voir sur GitHub</a></p>
-            </div>
-            <div class="card">
-                <h3>Projet Cybersecurity</h3>
-                <p>Audit réseau local avec Nmap & Wireshark.</p>
-                <p>Tech : Linux, Nmap, Wireshark</p>
-                <p>🔗 <a href="#">Voir le rapport</a></p>
-            </div>
-            <div class="card">
-                <h3>Projet Testing</h3>
-                <p>Test d’une API avec Postman et rapports de coverage.</p>
-                <p>Tech : Postman, Selenium</p>
-                <p>🔗 <a href="#">Voir sur GitHub</a></p>
-            </div>
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <h2>Projets</h2>
+
+    <div class="project-grid">
+
+        <!-- Projet Cloud -->
+        <div class="card">
+            <h3>Projet Cloud</h3>
+            <p>Déploiement d’un site statique sur AWS S3 + CloudFront.</p>
+            <span class="tech">AWS • Terraform</span>
+            <a href="#">🔗 Voir sur GitHub</a>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>À propos</h2>
-        <p>Je suis étudiante en 2ème année Cloud & Cybersecurity à Esprit, certifiée ISTQB FL 4.0, passionnée par les technologies Cloud, la cybersécurité, et les tests logiciels.</p>
-    </section>
+        <!-- Projet Cybersecurity -->
+        <div class="card">
+            <h3>Projet Cybersecurity</h3>
+            <p>Audit réseau local avec Nmap & Wireshark.</p>
+            <span class="tech">Linux • Nmap • Wireshark</span>
+            <a href="#">🔗 Voir le rapport</a>
+        </div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email : <a href="mailto:saraabdallah.tun@gmail.com">saraabdallah.tun@gmail.com</a><br>
-           GitHub : <a href="https://github.com/Saraabdal-new">github.com/Saraabdal-new</a>
-        </p>
-    </section>
+        <!-- Projet Testing -->
+        <div class="card">
+            <h3>Projet Testing</h3>
+            <p>Test d’une API avec Postman et rapport coverage.</p>
+            <span class="tech">Postman • Selenium</span>
+            <a href="#">🔗 Voir sur GitHub</a>
+        </div>
 
-    <footer>
-        &copy; 2025 Sara Abdallah. Tous droits réservés.
-    </footer>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <h2>À propos</h2>
+    <p>
+        Je suis étudiante en 2ème année Cloud & Cybersecurity à Esprit, certifiée ISTQB FL 4.0.
+        Passionnée par les technologies Cloud, la cybersécurité, et les tests logiciels.
+    </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email : <a href="mailto:saraabdallah.tun@gmail.com">saraabdallah.tun@gmail.com</a></p>
+    <p>GitHub : <a href="https://github.com/Saraabdal-new">github.com/Saraabdal-new</a></p>
+</section>
+
+<footer>
+    © 2025 — Portfolio Sara Abdallah
+</footer>
 
 </body>
 </html>
-
