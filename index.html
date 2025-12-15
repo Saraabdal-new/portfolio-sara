@@ -14,6 +14,21 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="css/styles.css">
 </head>
+<script>
+const srElements = document.querySelectorAll('section, .card, .projects__card, .services__card, .skills__item');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('reveal');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+srElements.forEach(el => observer.observe(el));
+</script>
+
 <body>
 
 <!--==================== HEADER ====================-->
@@ -229,3 +244,4 @@ ScrollReveal().reveal('.home__data, .about__container, .skills__container, .serv
 
 </body>
 </html>
+
