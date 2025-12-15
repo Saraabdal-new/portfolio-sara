@@ -3,93 +3,91 @@ const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close');
 
-// Show Menu
+/* Show Menu */
 if(navToggle){
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu');
     });
 }
 
-// Hide Menu
+/* Hide Menu */
 if(navClose){
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu');
     });
 }
 
-/*=============== REMOVE MENU MOBILE ===============*/
+/*=============== REMOVE MENU MOBILE ON LINK CLICK ===============*/
 const navLinks = document.querySelectorAll('.nav__link');
 
 navLinks.forEach(link => link.addEventListener('click', () => {
     navMenu.classList.remove('show-menu');
 }));
 
-/*=============== ADD BLUR TO HEADER ===============*/
-const blurHeader = () => {
+/*=============== ADD BLUR TO HEADER ON SCROLL ===============*/
+function blurHeader(){
     const header = document.getElementById('header');
-    if(window.scrollY >= 50) header.classList.add('blur-header');
-    else header.classList.remove('blur-header');
-};
+    if(window.scrollY >= 50){
+        header.classList.add('blur-header');
+    } else {
+        header.classList.remove('blur-header');
+    }
+}
 window.addEventListener('scroll', blurHeader);
 
-/*=============== EMAIL JS ===============*/
-const contactForm = document.getElementById('contact-form');
-
-if(contactForm){
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        // Remplacez 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', 'YOUR_PUBLIC_KEY' par vos infos EmailJS
-        emailjs.sendForm('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID','#contact-form','YOUR_PUBLIC_KEY')
-        .then(() => {
-            alert('Message envoyé ✅');
-            contactForm.reset();
-        }, (error) => {
-            alert('Erreur... 😢 Veuillez réessayer.');
-            console.error(error);
-        });
-    });
-}
-
-/*=============== SHOW SCROLL UP ===============*/ 
-const scrollUp = () => {
+/*=============== SHOW SCROLL UP BUTTON ===============*/
+function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
-    if(window.scrollY >= 350) scrollUp.classList.add('show-scroll');
-    else scrollUp.classList.remove('show-scroll');
-};
+    if(this.scrollY >= 350){
+        scrollUp.classList.add('show-scroll');
+    } else {
+        scrollUp.classList.remove('show-scroll');
+    }
+}
 window.addEventListener('scroll', scrollUp);
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]');
 
-const scrollActive = () => {
+function scrollActive(){
     const scrollY = window.pageYOffset;
 
-    sections.forEach(section => {
-        const sectionHeight = section.offsetHeight,
-              sectionTop = section.offsetTop - 60,
-              sectionId = section.getAttribute('id'),
-              navLink = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 60;
+        const sectionId = current.getAttribute('id');
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            navLink.classList.add('active-link');
+            document.querySelector('.nav ul li a[href*=' + sectionId + ']').classList.add('active-link');
         } else {
-            navLink.classList.remove('active-link');
+            document.querySelector('.nav ul li a[href*=' + sectionId + ']').classList.remove('active-link');
         }
     });
-};
+}
 window.addEventListener('scroll', scrollActive);
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
-const srElements = document.querySelectorAll('section, .card, .projects__card, .services__card, .skills__item');
+const faders = document.querySelectorAll('.fade-in');
 
-const observer = new IntersectionObserver((entries) => {
+const appearOptions = {
+    threshold: 0,
+    rootMargin: "0px 0px -50px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(
+    entries, 
+    appearOnScroll
+){
     entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('reveal');
-            observer.unobserve(entry.target);
+        if(!entry.isIntersecting){
+            return;
+        } else {
+            entry.target.classList.add('visible');
+            appearOnScroll.unobserve(entry.target);
         }
     });
-}, { threshold: 0.1 });
+}, appearOptions);
 
-srElements.forEach(el => observer.observe(el));
-
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
