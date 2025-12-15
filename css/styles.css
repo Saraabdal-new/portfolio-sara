@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+   <!--=============== REMIXICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/style.css">
+
+   <title>Portfolio — Sara Abdallah</title>
+</head>
+<body>
+
+<!--==================== HEADER ====================-->
+<header class="header" id="header">
+   <nav class="nav container">
+      <a href="#" class="nav__logo">
+         Sara <span>Abdallah</span>
+      </a>
+
+      <div class="nav__menu" id="nav-menu">
+         <ul class="nav__list">
+            <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+            <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+            <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+         </ul>
+
+         <i class="ri-close-line nav__close" id="nav-close"></i>
+      </div>
+
+      <div class="nav__actions">
+         <i class="ri-menu-line nav__toggle" id="nav-toggle"></i>
+      </div>
+   </nav>
+</header>
+
+<!--==================== MAIN ====================-->
+<main class="main">
+
+<!--==================== HOME ====================-->
+<section class="home section" id="home">
+   <div class="home__container container grid">
+      <div class="home__data">
+         <span class="home__subtitle">
+            Hello, <span>I’m</span>
+         </span>
+
+         <h1 class="home__title">
+            Sara Abdallah
+         </h1>
+
+         <h3 class="home__education">
+            Cloud & Cybersecurity Student — ISTQB Certified
+         </h3>
+
+         <p class="home__description">
+            Passionate about Cloud Computing, Cybersecurity and Software Testing.
+            I build secure, scalable and professional projects.
+         </p>
+
+         <a href="#contact" class="button">
+            Let’s Talk
+         </a>
+
+         <div class="home__social">
+            <a href="https://github.com/Saraabdal-new" target="_blank" class="home__social-link">
+               <i class="ri-github-fill"></i>
+            </a>
+            <a href="#" target="_blank" class="home__social-link">
+               <i class="ri-linkedin-box-fill"></i>
+            </a>
+         </div>
+      </div>
+   </div>
+</section>
+
+<!--==================== ABOUT ====================-->
+<section class="about section" id="about">
+   <div class="about__container container grid">
+      <div class="about__data">
+         <span class="section__subtitle">
+            My <span>Intro</span>
+         </span>
+
+         <h2 class="section__title">
+            About Me
+         </h2>
+
+         <p class="about__description">
+            I am a 2nd year Cloud & Cybersecurity student at Esprit,
+            ISTQB FL 4.0 certified. I work on cloud deployments,
+            cybersecurity analysis and software testing projects.
+         </p>
+
+         <a href="#contact" class="button">
+            Contact Me
+         </a>
+      </div>
+   </div>
+</section>
+
+<!--==================== SKILLS ====================-->
+<section class="skills section" id="skills">
+   <div class="skills__container container">
+      <span class="section__subtitle">
+         Favorite <span>Skills</span>
+      </span>
+
+      <h2 class="section__title">
+         My Skills
+      </h2>
+
+      <p class="skills__description">
+         Technologies and tools I use for Cloud, Cybersecurity and Testing.
+      </p>
+
+      <div class="skills__content grid">
+         <div class="skills__item">AWS (S3, EC2, IAM)</div>
+         <div class="skills__item">Terraform</div>
+         <div class="skills__item">Linux / Bash</div>
+         <div class="skills__item">Docker</div>
+         <div class="skills__item">Nmap & Wireshark</div>
+         <div class="skills__item">Postman & Selenium</div>
+         <div class="skills__item">Git & GitHub</div>
+      </div>
+
+      <a href="#projects" class="button">
+         See Projects
+      </a>
+   </div>
+</section>
+
+<!--==================== SERVICES ====================-->
+<section class="services section" id="services">
+   <div class="container">
+      <span class="section__subtitle">
+         My <span>Services</span>
+      </span>
+
+      <h2 class="section__title">
+         What I Do
+      </h2>
+
+      <div class="services__container grid">
+         <div class="services__card">
+            <h3 class="services__title">Cloud Deployment</h3>
+            <p class="services__description">
+               AWS infrastructure setup, S3 static hosting,
+               CloudFront, IAM and Terraform automation.
+            </p>
+         </div>
+
+         <div class="services__card">
+            <h3 class="services__title">Cybersecurity</h3>
+            <p class="services__description">
+               Network scanning, vulnerability analysis
+               and security auditing.
+            </p>
+         </div>
+
+         <div class="services__card">
+            <h3 class="services__title">Software Testing</h3>
+            <p class="services__description">
+               ISTQB-based testing, API testing,
+               automation with Selenium.
+            </p>
+         </div>
+      </div>
+   </div>
+</section>
+
+<!--==================== PROJECTS ====================-->
+<section class="projects section" id="projects">
+   <div class="container">
+      <span class="section__subtitle">
+         My <span>Jobs</span>
+      </span>
+
+      <h2 class="section__title">
+         Recent Projects
+      </h2>
+
+      <div class="projects__container grid">
+         <div class="projects__card">
+            <h3 class="projects__title">Cloud Static Website</h3>
+            <p class="projects__description">
+               AWS S3 + CloudFront deployment using Terraform.
+            </p>
+            <a href="#" class="projects__button">View Project</a>
+         </div>
+
+         <div class="projects__card">
+            <h3 class="projects__title">Network Security Audit</h3>
+            <p class="projects__description">
+               Network analysis using Nmap & Wireshark.
+            </p>
+            <a href="#" class="projects__button">View Report</a>
+         </div>
+
+         <div class="projects__card">
+            <h3 class="projects__title">API Testing</h3>
+            <p class="projects__description">
+               API testing with Postman and Selenium automation.
+            </p>
+            <a href="#" class="projects__button">View Project</a>
+         </div>
+      </div>
+   </div>
+</section>
+
+<!--==================== CONTACT ====================-->
+<section class="contact section" id="contact">
+   <div class="container">
+      <span class="section__subtitle">
+         Get In <span>Touch</span>
+      </span>
+
+      <h2 class="section__title">
+         Contact Me
+      </h2>
+
+      <form class="contact__form">
+         <input type="text" placeholder="Enter your name" class="contact__input">
+         <input type="email" placeholder="Enter your email" class="contact__input">
+         <textarea placeholder="Enter your message" class="contact__input"></textarea>
+
+         <button type="submit" class="button">
+            Send Message
+         </button>
+      </form>
+   </div>
+</section>
+
+</main>
+
+<!--==================== FOOTER ====================-->
+<footer class="footer">
+   <div class="footer__container container">
+      <h3 class="footer__title">
+         Sara <span>Abdallah</span>
+      </h3>
+
+      <p class="footer__education">
+         Cloud & Cybersecurity Student — ISTQB Certified
+      </p>
+
+      <div class="footer__social">
+         <a href="https://github.com/Saraabdal-new" target="_blank">
+            <i class="ri-github-fill"></i>
+         </a>
+      </div>
+
+      <span class="footer__copy">
+         © 2025 Sara Abdallah. All rights reserved.
+      </span>
+   </div>
+</footer>
+
+<!--=============== MAIN JS ===============-->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
