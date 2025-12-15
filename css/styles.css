@@ -31,31 +31,47 @@ h1,h2 { margin-bottom: 20px; }
 h1 { font-size: 2.5rem; color:#58a6ff; }
 h2 { color:#58a6ff; border-bottom:2px solid #30363d; padding-bottom:5px; }
 
-/* --- Home Section / Profile Image --- */
+/* --- Home Section / Hero Layout --- */
 .home {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* stack on mobile */
     align-items: center;
+    justify-content: center;
     text-align: center;
     padding-top: 150px; /* space for fixed nav */
     padding-bottom: 60px;
+    gap: 30px;
+}
+
+.home__content {
+    max-width: 600px; /* constrain text width */
 }
 
 .home__img {
-    width: 300px;          /* bigger on desktop */
-    max-width: 60%;        /* responsive limit */
-    height: auto;          /* keep aspect ratio */
-    border-radius: 50%;    /* circular */
-    margin-top: 30px;
+    width: 300px;
+    max-width: 60%;
+    height: auto;
+    border-radius: 50%;
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
 }
 
 .home__img:hover {
-    transform: scale(1.05); /* subtle zoom */
+    transform: scale(1.05);
 }
 
-/* --- Responsive Adjustments for Home Image --- */
+/* --- Desktop: Side by Side Layout --- */
+@media (min-width: 900px) {
+    .home {
+        flex-direction: row;
+        text-align: left;
+    }
+    .home__content {
+        margin-right: 40px;
+    }
+}
+
+/* --- Tablets / Mobile --- */
 @media(max-width:900px){
     .home__img {
         width: 250px;
@@ -67,7 +83,6 @@ h2 { color:#58a6ff; border-bottom:2px solid #30363d; padding-bottom:5px; }
     .home__img {
         width: 200px;
         max-width: 70%;
-        margin-top: 20px;
     }
 }
 
@@ -138,5 +153,6 @@ footer { text-align:center; padding:20px; background:#161b22; margin-top:40px; b
     nav ul li { margin:10px 0; }
     .nav__toggle, .nav__close { display:block; }
 }
+
 
 
