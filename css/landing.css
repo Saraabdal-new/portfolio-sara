@@ -23,58 +23,76 @@ body, html {
     text-align: center;
 }
 
-/* ---------- Content Fade-in ---------- */
-.landing__content {
-    animation: fadeIn 1.5s ease forwards;
-    opacity: 0;
+/* ----------------- Landing Container ----------------- */
+.landing-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical center */
+    align-items: center;     /* horizontal center */
+    text-align: center;
+    gap: 20px;
+    z-index: 2;
 }
 
-/* ---------- Gradient Glow Text ---------- */
-.landing__title {
-    font-size: 4rem;
-    font-weight: bold;
-    background: linear-gradient(90deg, #00f5ff, #ff00ff, #ffea00);
+/* ----------------- Main Title ----------------- */
+.landing-title {
+    font-size: 5rem;  /* huge title */
+    font-weight: 900;
+    font-family: 'Orbitron', sans-serif; /* cyber/futuristic font */
+    background: linear-gradient(90deg, #00f0ff, #1f6feb, #58ffc6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 10px rgba(88, 166, 255, 0.7), 
-                 0 0 20px rgba(88, 166, 255, 0.5);
-    margin-bottom: 1rem;
+    text-shadow:
+        0 0 10px #00f0ff,
+        0 0 20px #1f6feb,
+        0 0 30px #58ffc6,
+        0 0 40px rgba(88, 166, 255, 0.6);
+    animation: glowPulse 2.5s infinite alternate;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards, glowPulse 2.5s infinite alternate 2s;
 }
 
-.landing__subtitle {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 2.5rem;
-    text-shadow: 0 0 5px rgba(88, 166, 255, 0.5);
+/* ----------------- Subtitle ----------------- */
+.landing-subtitle {
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: 'Orbitron', sans-serif;
+    color: #c9d1d9;
+    opacity: 0;
+    animation: fadeIn 2s ease 0.5s forwards;
 }
 
-/* ---------- ENTER Button ---------- */
-.landing__enter-btn {
-    display: inline-block;
-    padding: 15px 50px;
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #0d1117;
-    background: #58a6ff;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 0 15px rgba(88, 166, 255, 0.7);
+/* ----------------- ENTER Button ----------------- */
+.landing-enter {
+    font-size: 1.5rem;
+    padding: 18px 45px;
+    border: 2px solid #58a6ff;
+    border-radius: 10px;
+    background: transparent;
+    color: #58a6ff;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 2s ease 1s forwards;
     transition: all 0.3s ease;
-    animation: pulse 2s infinite;
 }
 
-.landing__enter-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 25px rgba(88, 166, 255, 1);
+.landing-enter:hover {
+    box-shadow: 0 0 20px #58a6ff, 0 0 40px #1f6feb, 0 0 60px #58ffc6;
+    transform: scale(1.05);
+    background: rgba(88, 166, 255, 0.1);
 }
 
-/* ========== ANIMATIONS ========== */
+/* ----------------- Fade-in Animation ----------------- */
 @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+    to { opacity: 1; }
 }
 
-@keyframes pulse {
-    0%, 100% { box-shadow: 0 0 15px rgba(88, 166, 255, 0.7); }
-    50% { box-shadow: 0 0 25px rgba(88, 166, 255, 1); }
+/* ----------------- Neon Glow Pulse Animation ----------------- */
+@keyframes glowPulse {
+    0% { text-shadow: 0 0 10px #00f0ff, 0 0 20px #1f6feb, 0 0 30px #58ffc6; }
+    50% { text-shadow: 0 0 20px #00f0ff, 0 0 30px #1f6feb, 0 0 40px #58ffc6; }
+    100% { text-shadow: 0 0 10px #00f0ff, 0 0 20px #1f6feb, 0 0 30px #58ffc6; }
 }
