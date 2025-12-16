@@ -75,18 +75,18 @@ h2 {
     padding-bottom: 5px;
     margin-bottom: 25px;
 }
-/* ================= HOME / HERO ================= */
-
 .home {
-    position: relative;
+    min-height: 100vh;             /* full viewport height */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: center;       /* vertical centering */
+    align-items: center;           /* horizontal centering */
     text-align: center;
     gap: 35px;
-    padding-top: 160px;
+    padding-top: 80px;             /* smaller top space for navbar */
+    position: relative;
 }
+
 
 /* ---------- Text content ---------- */
 .home__content {
@@ -424,6 +424,7 @@ footer {
         width: 220px;
     }
 }
+
 
 
 
