@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sara Abdallah | Portfolio Landing</title>
+
+    <!-- Landing page styles -->
+    <link rel="stylesheet" href="landing.css">
+
+    <!-- VANTA.NET background library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+</head>
+<body>
+
+    <div id="landing">
+
+        <div class="landing__content fade-in">
+            <h1 class="landing__title">Portfolio Sara Abdallah</h1>
+            <p class="landing__subtitle">Cloud Cybersecurity, Software Test Engineer (ISTQB Certified)</p>
+            <a href="index.html" class="landing__enter-btn">ENTER</a>
+        </div>
+
+    </div>
+
+    <!-- Initialize VANTA.NET -->
+    <script>
+        VANTA.NET({
+            el: "#landing",
+            mouseControls: true,
+            touchControls: true,
+            minHeight: 600.00,
+            minWidth: 800.00,
+            scale: 1.0,
+            scaleMobile: 1.0,
+            backgroundColor: 0x0d1117,
+            color: 0x58a6ff,
+            points: 12.0,
+            maxDistance: 20.0,
+            spacing: 15.0,
+        });
+    </script>
+
+</body>
+</html>
