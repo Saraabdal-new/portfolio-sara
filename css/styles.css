@@ -55,6 +55,21 @@ nav ul li a {
     cursor: pointer;
     color: #58a6ff;
 }
+/* ===== Mobile Layout for Navigation ===== */
+@media(max-width: 600px){
+    nav ul { 
+        flex-direction: row;       /* align links side by side */
+        flex-wrap: wrap;           /* wrap if too many links */
+        justify-content: center;   /* center horizontally */
+        gap: 10px;                 /* spacing between links */
+    }
+    nav ul li { 
+        margin: 0;                 /* remove vertical spacing */
+    }
+    .nav__toggle, .nav__close { 
+        display: block; 
+    }
+}
 
 /* ================= SECTIONS ================= */
 section {
@@ -190,10 +205,21 @@ h2 {
 
 @media (min-width: 900px) {
     .home {
-        flex-direction: row;
         text-align: center;
         align-items: center;
     }
+
+/* ---------- Home Container (centers text + image together) ---------- */
+.home__container {
+    display: flex;               /* flex layout */
+    flex-direction: column;      /* stack vertically */
+    justify-content: center;     /* vertical centering */
+    align-items: center;         /* horizontal centering */
+    min-height: calc(100vh - 80px); /* full viewport height minus navbar */
+    gap: 35px;                   /* spacing between elements */
+    text-align: center;
+}
+
 
     .home__content {
         margin-right: 50px;
@@ -428,6 +454,7 @@ footer {
         width: 220px;
     }
 }
+
 
 
 
