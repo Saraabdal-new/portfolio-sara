@@ -55,21 +55,45 @@ nav ul li a {
     cursor: pointer;
     color: #58a6ff;
 }
-/* ===== Mobile Layout for Navigation ===== */
-@media(max-width: 600px){
-    nav ul { 
-        flex-direction: row;       /* align links side by side */
-        flex-wrap: wrap;           /* wrap if too many links */
+/* ================= MOBILE NAV & HOME RESPONSIVE ================= */
+@media (max-width: 600px) {
+
+    /* Navigation */
+    nav ul {
+        display: flex;             /* horizontal layout */
+        flex-direction: row;       /* links side by side */
+        flex-wrap: wrap;           /* allow wrapping on very small screens */
         justify-content: center;   /* center horizontally */
         gap: 10px;                 /* spacing between links */
     }
-    nav ul li { 
+
+    nav ul li {
         margin: 0;                 /* remove vertical spacing */
     }
-    .nav__toggle, .nav__close { 
-        display: block; 
+
+    .nav__toggle,
+    .nav__close {
+        display: block;            /* show hamburger menu icons */
+    }
+
+    /* Home image resizing */
+    .home__img {
+        width: 220px;
+        max-width: 60%;
+    }
+
+    /* Optional: adjust home buttons gap for small screens */
+    .home__buttons {
+        flex-direction: column;    /* stack buttons vertically */
+        gap: 10px;
+    }
+
+    /* Optional: adjust padding for home container */
+    .home__container {
+        padding: 0 15px;
     }
 }
+
 
 /* ================= SECTIONS ================= */
 section {
@@ -454,6 +478,7 @@ footer {
         width: 220px;
     }
 }
+
 
 
 
