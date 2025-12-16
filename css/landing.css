@@ -1,0 +1,80 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+/* ================= LANDING ================= */
+#landing {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #58a6ff;
+    text-align: center;
+}
+
+/* ---------- Content Fade-in ---------- */
+.landing__content {
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+/* ---------- Gradient Glow Text ---------- */
+.landing__title {
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #00f5ff, #ff00ff, #ffea00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(88, 166, 255, 0.7), 
+                 0 0 20px rgba(88, 166, 255, 0.5);
+    margin-bottom: 1rem;
+}
+
+.landing__subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2.5rem;
+    text-shadow: 0 0 5px rgba(88, 166, 255, 0.5);
+}
+
+/* ---------- ENTER Button ---------- */
+.landing__enter-btn {
+    display: inline-block;
+    padding: 15px 50px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #0d1117;
+    background: #58a6ff;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.7);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.landing__enter-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(88, 166, 255, 1);
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 15px rgba(88, 166, 255, 0.7); }
+    50% { box-shadow: 0 0 25px rgba(88, 166, 255, 1); }
+}
