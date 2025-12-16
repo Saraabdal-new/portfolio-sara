@@ -1,48 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sara Abdallah | Portfolio Landing</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sara Abdallah | Portfolio Landing</title>
+  <!-- Landing page styles -->
+  <link rel="stylesheet" href="landing.css">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&display=swap" rel="stylesheet">
-
-    <!-- Landing page CSS -->
-    <link rel="stylesheet" href="landing.css">
-
-    <!-- Three.js and VANTA.NET -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+  <!-- Three.js (required by Vanta) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <!-- Vanta effect -->
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
 </head>
 <body>
 
-    <!-- Landing Container -->
-    <section id="landing">
-        <div class="landing-container">
-            <h1 class="landing-title">Portfolio Sara Abdallah</h1>
-            <p class="landing-subtitle">Cloud Cybersecurity, Software Test Engineer (ISTQB Certified)</p>
-            <button class="landing-enter" onclick="window.location.href='index.html'">ENTER</button>
-        </div>
-    </section>
+  <!-- Landing Section -->
+  <section id="landing">
+    <div class="landing-container">
+      <h1 class="landing-title">Portfolio Sara Abdallah</h1>
+      <p class="landing-subtitle">Cloud Cybersecurity, Software Test Engineer (ISTQB Certified)</p>
+      <button class="landing-enter" onclick="window.location.href='index.html'">ENTER</button>
+    </div>
+  </section>
 
-    <!-- Initialize VANTA.NET -->
-    <script>
-        VANTA.NET({
-            el: "#landing",
-            mouseControls: true,
-            touchControls: true,
-            minHeight: 600.00,
-            minWidth: 800.00,
-            scale: 1.0,
-            scaleMobile: 1.0,
-            backgroundColor: 0x0d1117,  // dark background
-            color: 0x58a6ff,            // particle color
-            points: 12.0,
-            maxDistance: 20.0,
-            spacing: 15.0
-        });
-    </script>
+  <!-- Initialize VANTA.NET -->
+  <script>
+    VANTA.NET({
+      el: "#landing",
+      mouseControls: true,
+      touchControls: true,
+      minHeight: 600.00,
+      minWidth: 800.00,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      backgroundColor: 0x0d1117,
+      color: 0x58a6ff,
+      points: 12.0,
+      maxDistance: 20.0,
+      spacing: 15.0
+    });
+  </script>
 
 </body>
 </html>
