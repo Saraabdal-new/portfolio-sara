@@ -142,16 +142,77 @@
         </div>
     </section>
 
-    <!--=============== CONTACT ===============-->
-    <section class="contact section fade-in" id="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <input type="text" name="name" placeholder="Enter your name" required>
-            <input type="email" name="email" placeholder="Enter your email" required>
-            <textarea name="message" placeholder="Enter your message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+   <!-- ============ CONTACT ============ -->
+<section class="contact section" id="contact">
+
+    <span class="section__subtitle">Get in touch</span>
+    <h2 class="section__title">Contact Me</h2>
+
+    <div class="contact__container container grid">
+
+        <!-- Contact Info -->
+        <div class="contact__content">
+            <h3 class="contact__title">Talk to me</h3>
+
+            <div class="contact__info">
+                <div class="contact__card">
+                    <i class="bx bx-mail-send contact__card-icon"></i>
+                    <h3 class="contact__card-title">Email</h3>
+                    <span class="contact__card-data">user@gmail.com</span>
+
+                    <a href="mailto:user@gmail.com" class="contact__button">
+                        Write me
+                        <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact__content">
+            <h3 class="contact__title">Write me your project</h3>
+
+            <form action="" class="contact__form">
+
+                <div class="contact__form-div">
+                    <label class="contact__form-tag">Name</label>
+                    <input
+                        type="text"
+                        placeholder="Insert your name"
+                        class="contact__form-input"
+                    />
+                </div>
+
+                <div class="contact__form-div">
+                    <label class="contact__form-tag">Mail</label>
+                    <input
+                        type="email"
+                        placeholder="Insert your email"
+                        class="contact__form-input"
+                    />
+                </div>
+
+                <div class="contact__form-div">
+                    <label class="contact__form-tag">Project</label>
+                    <textarea
+                        cols="30"
+                        rows="10"
+                        placeholder="Write your project"
+                        class="contact__form-input"
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn">
+                    Send Message
+                </button>
+
+            </form>
+        </div>
+
+    </div>
+
+</section>
+
 
     <!--=============== SCROLL UP BUTTON ===============-->
     <a href="#home" class="scrollup" id="scroll-up">&#8679;</a>
@@ -159,5 +220,6 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
