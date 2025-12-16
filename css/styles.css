@@ -187,10 +187,11 @@ h2 {
 }
 
 /* ========== DESKTOP LAYOUT ========== */
+
 @media (min-width: 900px) {
     .home {
         flex-direction: row;
-        text-align: left;
+        text-align: center;
         align-items: center;
     }
 
@@ -427,6 +428,7 @@ footer {
         width: 220px;
     }
 }
+
 
 
 
