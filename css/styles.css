@@ -75,9 +75,10 @@ h2 {
     padding-bottom: 5px;
     margin-bottom: 25px;
 }
-
 /* ================= HOME / HERO ================= */
+
 .home {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,7 +88,7 @@ h2 {
     padding-top: 160px;
 }
 
-/* Text container */
+/* ---------- Text content ---------- */
 .home__content {
     max-width: 600px;
 }
@@ -96,7 +97,25 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Buttons */
+.home__greeting {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #c9d1d9;
+}
+
+.home__name {
+    font-size: 2.5rem;
+    color: #58a6ff;
+}
+
+.home__role {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #8b949e;
+}
+
+/* ---------- Buttons ---------- */
 .home__buttons {
     display: flex;
     gap: 15px;
@@ -104,13 +123,19 @@ h2 {
     margin-top: 10px;
 }
 
-/* Profile image */
+/* ---------- Profile image ---------- */
+.home__handle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .home__img {
     width: 340px;
     max-width: 70%;
     height: auto;
     border-radius: 50%;
-    box-shadow: 0 18px 35px rgba(0,0,0,0.4);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease;
 }
 
@@ -118,14 +143,47 @@ h2 {
     transform: scale(1.05);
 }
 
-/* Scroll Down */
+/* ---------- Social links ---------- */
+.home__social {
+    position: absolute;
+    left: 0;
+    bottom: 5rem;
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.home__social-link {
+    width: max-content;
+    background-color: #161b22;
+    color: #58a6ff;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    display: flex;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.home__social-link:hover {
+    background-color: #58a6ff;
+    color: #ffffff;
+}
+
+.home__social::after {
+    content: "";
+    width: 32px;
+    height: 2px;
+    background-color: #58a6ff;
+    transform: rotate(90deg) translate(16px, 3px);
+}
+
+/* ---------- Scroll down ---------- */
 .home__scroll {
     margin-top: 30px;
     font-size: 0.9rem;
     opacity: 0.8;
 }
 
-/* ===== Desktop layout ===== */
+/* ========== DESKTOP LAYOUT ========== */
 @media (min-width: 900px) {
     .home {
         flex-direction: row;
@@ -350,4 +408,5 @@ footer {
         width: 220px;
     }
 }
+
 
