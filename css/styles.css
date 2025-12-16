@@ -75,6 +75,9 @@ h2 {
     padding-bottom: 5px;
     margin-bottom: 25px;
 }
+
+/* ================= HOME / HERO ================= */
+
 .home {
     min-height: 100vh;             /* full viewport height */
     display: flex;
@@ -424,6 +427,7 @@ footer {
         width: 220px;
     }
 }
+
 
 
 
