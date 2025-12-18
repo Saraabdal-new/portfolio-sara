@@ -1,3 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+   <!--=============== REMIXICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/style.css">
+
+   <title>Portfolio — Sara Abdallah</title>
+</head>
+<body>
+
+<!--==================== HEADER ====================-->
+<header class="header" id="header">
+   <nav class="nav container">
+      <a href="#" class="nav__logo">
+         Sara <span>Abdallah</span>
+      </a>
+
+      <div class="nav__menu" id="nav-menu">
+         <ul class="nav__list">
+            <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+            <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+            <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+         </ul>
+
+         <i class="ri-close-line nav__close" id="nav-close"></i>
+      </div>
+
+      <div class="nav__actions">
+         <i class="ri-menu-line nav__toggle" id="nav-toggle"></i>
+      </div>
+   </nav>
+</header>
+
+<!--==================== MAIN ====================-->
+<main class="main">
+
+<!--==================== HOME ====================-->
 /* ================= HOME ================= */
 
 /* Container */
@@ -106,85 +155,271 @@
     transform: rotate(90deg) translate(16px, 3px);
 }
 
+<!--==================== ABOUT ====================-->
+<section class="about section" id="about">
+   <div class="about__container container grid">
+      <div class="about__data">
+         <span class="section__subtitle">
+            My <span>Intro</span>
+         </span>
+
+         <h2 class="section__title">
+            About Me
+         </h2>
+
+         <p class="about__description">
+            I am a 2nd year Cloud & Cybersecurity student at Esprit,
+            ISTQB FL 4.0 certified. I work on cloud deployments,
+            cybersecurity analysis and software testing projects.
+         </p>
+
+         <a href="#contact" class="button">
+            Contact Me
+         </a>
+      </div>
+   </div>
+</section>
+
+<!--==================== SKILLS ====================-->
+<section class="skills section" id="skills">
+   <div class="skills__container container">
+      <span class="section__subtitle">
+         Favorite <span>Skills</span>
+      </span>
+
+      <h2 class="section__title">
+         My Skills
+      </h2>
+
+      <p class="skills__description">
+         Technologies and tools I use for Cloud, Cybersecurity and Testing.
+      </p>
+
+      <div class="skills__content grid">
+         <div class="skills__item">AWS (S3, EC2, IAM)</div>
+         <div class="skills__item">Terraform</div>
+         <div class="skills__item">Linux / Bash</div>
+         <div class="skills__item">Docker</div>
+         <div class="skills__item">Nmap & Wireshark</div>
+         <div class="skills__item">Postman & Selenium</div>
+         <div class="skills__item">Git & GitHub</div>
+      </div>
+
+      <a href="#projects" class="button">
+         See Projects
+      </a>
+   </div>
+</section>
+
+<!--==================== SERVICES ====================-->
+<section class="services section" id="services">
+   <div class="container">
+      <span class="section__subtitle">
+         My <span>Services</span>
+      </span>
+
+      <h2 class="section__title">
+         What I Do
+      </h2>
+
+      <div class="services__container grid">
+         <div class="services__card">
+            <h3 class="services__title">Cloud Deployment</h3>
+            <p class="services__description">
+               AWS infrastructure setup, S3 static hosting,
+               CloudFront, IAM and Terraform automation.
+            </p>
+         </div>
+
+         <div class="services__card">
+            <h3 class="services__title">Cybersecurity</h3>
+            <p class="services__description">
+               Network scanning, vulnerability analysis
+               and security auditing.
+            </p>
+         </div>
+
+         <div class="services__card">
+            <h3 class="services__title">Software Testing</h3>
+            <p class="services__description">
+               ISTQB-based testing, API testing,
+               automation with Selenium.
+            </p>
+         </div>
+      </div>
+   </div>
+</section>
+
+<!--==================== PROJECTS ====================-->
+<section class="projects section" id="projects">
+   <div class="container">
+      <span class="section__subtitle">
+         My <span>Jobs</span>
+      </span>
+
+      <h2 class="section__title">
+         Recent Projects
+      </h2>
+
+      <div class="projects__container grid">
+         <div class="projects__card">
+            <h3 class="projects__title">Cloud Static Website</h3>
+            <p class="projects__description">
+               AWS S3 + CloudFront deployment using Terraform.
+            </p>
+            <a href="#" class="projects__button">View Project</a>
+         </div>
+
+         <div class="projects__card">
+            <h3 class="projects__title">Network Security Audit</h3>
+            <p class="projects__description">
+               Network analysis using Nmap & Wireshark.
+            </p>
+            <a href="#" class="projects__button">View Report</a>
+         </div>
+
+         <div class="projects__card">
+            <h3 class="projects__title">API Testing</h3>
+            <p class="projects__description">
+               API testing with Postman and Selenium automation.
+            </p>
+            <a href="#" class="projects__button">View Project</a>
+         </div>
+      </div>
+   </div>
+</section>
+
+/* ================= CONTACT ================= */
+
+/* Container */
+.contact__container {
+    row-gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Title */
+.contact__title {
+    text-align: center;
+    font-size: var(--h3-font-size);
+    margin-bottom: 1.5rem;
+}
+
+/* Info grid */
+.contact__info {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Contact card */
+.contact__card {
+    background-color: var(--container-color);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    text-align: center;
+}
+
+.contact__card-icon {
+    font-size: 2rem;
+    color: var(--title-color);
+    margin-bottom: 0.25rem;
+}
+
+.contact__card-title {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+}
+
+.contact__card-data {
+    font-size: var(--small-font-size);
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+/* Button */
+.contact__button {
+    color: var(--first-color);
+    font-size: var(--small-font-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.25rem;
+    cursor: pointer;
+}
+
+.contact__button:hover .contact__button-icon {
+    transform: translateX(0.25rem);
+}
+
+.contact__button-icon {
+    font-size: 1rem;
+    transition: 0.4s;
+}
+
+/* Form */
+.contactform__div {
+    position: relative;
+    margin-bottom: 2rem;
+    height: 4rem;
+}
+
+.contactform__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--text-color-light);
+    background: none;
+    color: var(--text-color);
+    outline: none;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    z-index: 1;
+}
+
+.contact_form__tag {
+    position: absolute;
+    top: -0.75rem;
+    left: 1.25rem;
+    font-size: var(--smaller-font-size);
+    padding: 0.25rem;
+    background-color: var(--body-color);
+    z-index: 10;
+}
+
+.contact_form__area {
+    height: 11rem;
+    resize: none;
+}
 
 
+</main>
 
+<!--==================== FOOTER ====================-->
+<footer class="footer">
+   <div class="footer__container container">
+      <h3 class="footer__title">
+         Sara <span>Abdallah</span>
+      </h3>
 
+      <p class="footer__education">
+         Cloud & Cybersecurity Student — ISTQB Certified
+      </p>
 
-1= CONTACT＝！
-• contact_container{ row-gap: 3rem; padding-bottom: 3rem;
-====*/
-・contact_titlel
-text-align: center;
-font-size: var(--h3-font-size);
-margin-bottom: 1.5rem;
-•contact_infol display: grid;
-gap: 1rem;
-}
-• contact card{
-background-color: var(--container-color);
-padding: 1rem; border-radius: .75rem;
-text-align: center;
-•contact_card-iconf font-size: 2rem;
-color: var(--title-color);
-}
+      <div class="footer__social">
+         <a href="https://github.com/Saraabdal-new" target="_blank">
+            <i class="ri-github-fill"></i>
+         </a>
+      </div>
 
-• contact card-icon{ font-size: 2rem;
-color: var(--title-color); margin-bottom: •25rem;
-}
+      <span class="footer__copy">
+         © 2025 Sara Abdallah. All rights reserved.
+      </span>
+   </div>
+</footer>
 
-•contact card-title,
-•contact_card-data{
-font-size: var(--small-font-size);
-}
-•contact_card-title{
- font-weight: var(--font-medium);
-}
-contact_card-data{
-display: block; margin-bottom: •75rem;
-}
+<!--=============== MAIN JS ===============-->
+<script src="js/main.js"></script>
 
-• contact_button{
-color: var(--first-color);
-font-size: var(--small-font-size);
-display: flex;
-align-items: center; justify-content: center; column-gap: .25rem;
-}
-•contact_button: hover • contact_button-icon{ transform: translatex(.25rem);
-}
-
-
-• contact_button-icon{ font-size: 1rem; transition: 4s;
-}
-• contactform-div{
-position: relative; margin-bottom: 2rem;
-height: 4rem;
-}
-
-
-• contactform-input{
-position: absolute;
-top: 0; left: 0;
-width: 100%; height: 100%;
-border: 2px solid var(--text-color-light);
-background: none;
-color: var(--text-color);
-outline: none;
-padding: 1.5rem; border-radius: • 75rem; z-index: 1;
-}
-• contact_form-tag{
-position: absolute;
-top: -. 75rem;
-Left: 1.25rem;
-font-size: var(--smaller-font-size);
-padding: . 25rem;
-background-color: var(--body-color);
-z-index: 10;
-}
-
-•contact_form-area{
-height: 11rem;
-• contact
-form-area textaread
-resize: none;
-}
+</body>
+</html>
