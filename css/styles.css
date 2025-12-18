@@ -1,67 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-   <!--=============== FAVICON ===============-->
-   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--body-color, #0d1117);
+    color: var(--text-color, #c9d1d9);
+    line-height: 1.6;
+}
 
-   <!--=============== REMIXICONS ===============-->
-   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-   <!--=============== CSS ===============-->
-   <link rel="stylesheet" href="assets/css/style.css">
+img {
+    max-width: 100%;
+    display: block;
+}
 
-   <title>Portfolio — Sara Abdallah</title>
-</head>
-<body>
-
-<!--==================== HEADER ====================-->
-<header class="header" id="header">
-   <nav class="nav container">
-      <a href="#" class="nav__logo">
-         Sara <span>Abdallah</span>
-      </a>
-
-      <div class="nav__menu" id="nav-menu">
-         <ul class="nav__list">
-            <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-            <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-            <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-         </ul>
-
-         <i class="ri-close-line nav__close" id="nav-close"></i>
-      </div>
-
-      <div class="nav__actions">
-         <i class="ri-menu-line nav__toggle" id="nav-toggle"></i>
-      </div>
-   </nav>
-</header>
-
-<!--==================== MAIN ====================-->
-<main class="main">
-
-<!--==================== HOME ====================-->
 /* ================= HOME ================= */
-
-/* Container */
 .home__container {
     position: relative;
     row-gap: 4.5rem;
     padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Home data */
 .home__data {
     text-align: center;
 }
 
-/* Greeting & education */
 .home__greeting,
 .home__role {
     font-size: 0.875rem;
@@ -79,51 +53,38 @@
     margin-bottom: 2.5rem;
 }
 
-/* Name */
 .home__name {
     font-size: 2.5rem;
     color: #58a6ff;
     margin-bottom: 0.5rem;
 }
 
-/* Profile image */
+.home__handle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 190px;
+    height: 293px;
+    background: linear-gradient(180deg, rgba(88, 166, 255, 0.4), rgba(88, 166, 255, 0.1));
+    border-radius: 5rem 5rem 1rem 1rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
 .home__img {
     width: 160px;
 }
 
-/* Image container */
-.home__handle {
-    justify-self: center;
-    width: 190px;
-    height: 293px;
-    background: linear-gradient(
-        180deg,
-        rgba(88, 166, 255, 0.4),
-        rgba(88, 166, 255, 0.1)
-    );
-    border-radius: 10rem 10rem 1rem 1rem;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    overflow: hidden;
-}
-
-/* Buttons */
 .home__buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
-/* Social + Scroll positioning */
-.home__social,
-.home__scroll {
-    position: absolute;
-}
-
-/* Social links */
 .home__social {
+    position: absolute;
     bottom: 5rem;
     left: 0;
     display: grid;
@@ -146,7 +107,6 @@
     color: #ffffff;
 }
 
-/* Decorative line */
 .home__social::after {
     content: "";
     width: 32px;
@@ -155,164 +115,158 @@
     transform: rotate(90deg) translate(16px, 3px);
 }
 
-<!--==================== ABOUT ====================-->
-<section class="about section" id="about">
-   <div class="about__container container grid">
-      <div class="about__data">
-         <span class="section__subtitle">
-            My <span>Intro</span>
-         </span>
+/* ================= ABOUT ================= */
+.section {
+    padding: 4rem 0;
+}
 
-         <h2 class="section__title">
-            About Me
-         </h2>
+.about__container {
+    display: grid;
+    gap: 2rem;
+}
 
-         <p class="about__description">
-            I am a 2nd year Cloud & Cybersecurity student at Esprit,
-            ISTQB FL 4.0 certified. I work on cloud deployments,
-            cybersecurity analysis and software testing projects.
-         </p>
+.section__subtitle {
+    font-size: 0.875rem;
+    color: #8b949e;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
 
-         <a href="#contact" class="button">
-            Contact Me
-         </a>
-      </div>
-   </div>
-</section>
+.section__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
-<!--==================== SKILLS ====================-->
-<section class="skills section" id="skills">
-   <div class="skills__container container">
-      <span class="section__subtitle">
-         Favorite <span>Skills</span>
-      </span>
+.about__description {
+    font-size: 1rem;
+    color: #c9d1d9;
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
-      <h2 class="section__title">
-         My Skills
-      </h2>
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #58a6ff;
+    color: #fff;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
 
-      <p class="skills__description">
-         Technologies and tools I use for Cloud, Cybersecurity and Testing.
-      </p>
+.button:hover {
+    background-color: #1e7cff;
+}
 
-      <div class="skills__content grid">
-         <div class="skills__item">AWS (S3, EC2, IAM)</div>
-         <div class="skills__item">Terraform</div>
-         <div class="skills__item">Linux / Bash</div>
-         <div class="skills__item">Docker</div>
-         <div class="skills__item">Nmap & Wireshark</div>
-         <div class="skills__item">Postman & Selenium</div>
-         <div class="skills__item">Git & GitHub</div>
-      </div>
+/* ================= SKILLS ================= */
+.skills__container {
+    text-align: center;
+}
 
-      <a href="#projects" class="button">
-         See Projects
-      </a>
-   </div>
-</section>
+.skills__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
-<!--==================== SERVICES ====================-->
-<section class="services section" id="services">
-   <div class="container">
-      <span class="section__subtitle">
-         My <span>Services</span>
-      </span>
+.skills__item {
+    background-color: #161b22;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+}
 
-      <h2 class="section__title">
-         What I Do
-      </h2>
+/* ================= SERVICES ================= */
+.services__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
 
-      <div class="services__container grid">
-         <div class="services__card">
-            <h3 class="services__title">Cloud Deployment</h3>
-            <p class="services__description">
-               AWS infrastructure setup, S3 static hosting,
-               CloudFront, IAM and Terraform automation.
-            </p>
-         </div>
+.services__card {
+    background-color: #161b22;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: transform 0.3s;
+}
 
-         <div class="services__card">
-            <h3 class="services__title">Cybersecurity</h3>
-            <p class="services__description">
-               Network scanning, vulnerability analysis
-               and security auditing.
-            </p>
-         </div>
+.services__card:hover {
+    transform: translateY(-5px);
+}
 
-         <div class="services__card">
-            <h3 class="services__title">Software Testing</h3>
-            <p class="services__description">
-               ISTQB-based testing, API testing,
-               automation with Selenium.
-            </p>
-         </div>
-      </div>
-   </div>
-</section>
+.services__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
 
-<!--==================== PROJECTS ====================-->
-<section class="projects section" id="projects">
-   <div class="container">
-      <span class="section__subtitle">
-         My <span>Jobs</span>
-      </span>
+.services__description {
+    font-size: 0.875rem;
+    color: #c9d1d9;
+}
 
-      <h2 class="section__title">
-         Recent Projects
-      </h2>
+/* ================= PROJECTS ================= */
+.projects__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
 
-      <div class="projects__container grid">
-         <div class="projects__card">
-            <h3 class="projects__title">Cloud Static Website</h3>
-            <p class="projects__description">
-               AWS S3 + CloudFront deployment using Terraform.
-            </p>
-            <a href="#" class="projects__button">View Project</a>
-         </div>
+.projects__card {
+    background-color: #161b22;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: transform 0.3s;
+}
 
-         <div class="projects__card">
-            <h3 class="projects__title">Network Security Audit</h3>
-            <p class="projects__description">
-               Network analysis using Nmap & Wireshark.
-            </p>
-            <a href="#" class="projects__button">View Report</a>
-         </div>
+.projects__card:hover {
+    transform: translateY(-5px);
+}
 
-         <div class="projects__card">
-            <h3 class="projects__title">API Testing</h3>
-            <p class="projects__description">
-               API testing with Postman and Selenium automation.
-            </p>
-            <a href="#" class="projects__button">View Project</a>
-         </div>
-      </div>
-   </div>
-</section>
+.projects__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.projects__description {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.projects__button {
+    font-size: 0.875rem;
+    color: #58a6ff;
+    transition: 0.3s;
+}
+
+.projects__button:hover {
+    color: #1e7cff;
+}
 
 /* ================= CONTACT ================= */
-
-/* Container */
 .contact__container {
     row-gap: 3rem;
     padding-bottom: 3rem;
+    display: grid;
+    justify-items: center;
 }
 
-/* Title */
 .contact__title {
     text-align: center;
-    font-size: var(--h3-font-size);
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
-/* Info grid */
 .contact__info {
     display: grid;
     gap: 1rem;
 }
 
-/* Contact card */
 .contact__card {
-    background-color: var(--container-color);
+    background-color: #161b22;
     padding: 1rem;
     border-radius: 0.75rem;
     text-align: center;
@@ -320,25 +274,24 @@
 
 .contact__card-icon {
     font-size: 2rem;
-    color: var(--title-color);
+    color: #58a6ff;
     margin-bottom: 0.25rem;
 }
 
 .contact__card-title {
-    font-size: var(--small-font-size);
-    font-weight: var(--font-medium);
+    font-size: 0.875rem;
+    font-weight: 500;
 }
 
 .contact__card-data {
-    font-size: var(--small-font-size);
+    font-size: 0.875rem;
     display: block;
     margin-bottom: 0.75rem;
 }
 
-/* Button */
 .contact__button {
-    color: var(--first-color);
-    font-size: var(--small-font-size);
+    color: #58a6ff;
+    font-size: 0.875rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -355,7 +308,6 @@
     transition: 0.4s;
 }
 
-/* Form */
 .contactform__div {
     position: relative;
     margin-bottom: 2rem;
@@ -368,9 +320,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border: 2px solid var(--text-color-light);
+    border: 2px solid #8b949e;
     background: none;
-    color: var(--text-color);
+    color: #c9d1d9;
     outline: none;
     padding: 1.5rem;
     border-radius: 0.75rem;
@@ -381,9 +333,9 @@
     position: absolute;
     top: -0.75rem;
     left: 1.25rem;
-    font-size: var(--smaller-font-size);
+    font-size: 0.75rem;
     padding: 0.25rem;
-    background-color: var(--body-color);
+    background-color: #0d1117;
     z-index: 10;
 }
 
@@ -392,34 +344,31 @@
     resize: none;
 }
 
+/* ================= FOOTER ================= */
+.footer {
+    padding: 2rem 0;
+    background-color: #161b22;
+    text-align: center;
+}
 
-</main>
+.footer__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
 
-<!--==================== FOOTER ====================-->
-<footer class="footer">
-   <div class="footer__container container">
-      <h3 class="footer__title">
-         Sara <span>Abdallah</span>
-      </h3>
+.footer__education {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
 
-      <p class="footer__education">
-         Cloud & Cybersecurity Student — ISTQB Certified
-      </p>
+.footer__social a {
+    color: #58a6ff;
+    font-size: 1.25rem;
+    margin: 0 0.25rem;
+}
 
-      <div class="footer__social">
-         <a href="https://github.com/Saraabdal-new" target="_blank">
-            <i class="ri-github-fill"></i>
-         </a>
-      </div>
-
-      <span class="footer__copy">
-         © 2025 Sara Abdallah. All rights reserved.
-      </span>
-   </div>
-</footer>
-
-<!--=============== MAIN JS ===============-->
-<script src="js/main.js"></script>
-
-</body>
-</html>
+.footer__copy {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+}
