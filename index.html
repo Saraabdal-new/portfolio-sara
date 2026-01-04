@@ -1,286 +1,391 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sara Abdallah | Portfolio</title>
+    <!-- ============= FAVICON ============== -->
 
+    <link rel="'shortcut icon" href="" type="image/x-icon" />
+    
     <!-- Boxicons (REQUIRED for social icons) -->
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <link rel="stylesheet" href="css/styles.css" />
 
-<body>
+    <title>Portfolio Sara ABDALLAH</title> 
+  </head>
 
+  <body>
     <!--=============== HEADER / NAVIGATION ===============-->
     <header id="header">
-        <nav class="nav container">
-            <a href="#home" class="nav__logo">Sara Abdallah</a>
+      <nav class="nav container">
+        <a href="#home" class="nav__logo">Sara Abdallah</a>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active-link">Accueil</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">À propos</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Compétences</a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-                    <li class="nav__item"><a href="#projects" class="nav__link">Projets</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                </ul>
-                <div class="nav__close" id="nav-close">&times;</div>
-            </div>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">Accueil
+                  <i class='bx bx-home-alt' ></i>
+              </a>
+            </li>
 
-            <div class="nav__toggle" id="nav-toggle">&#9776;</div>
-        </nav>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">
+                <i class='bx bx-user' ></i>
+              </a>
+            </li>
+
+
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">
+                <i class='bx bx-book' ></i>
+              </a>
+            </li>
+
+
+            <li class="nav__item">
+              <a href="#work" class="nav__link">
+                <i class='bx bx-briefcase-alt-2' ></i>
+              </a>
+            </li>
+
+
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">
+                <i class='bx bx-message-square-detail' ></i>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Theme change button -->
+        <i class='bx bx-moon change-theme' id="theme-button"></i>
+
+      </nav>
     </header>
-
+  <!-- ============ MAIN ============ -->
+   <main class="main">  
     <!-- ============ HOME ============ -->
-<section class="home section fade-in" id="home">
-
-    <div class="home__container container grid">
-
+    <section class="home section fade-in" id="home">
+      <div class="home__container container grid">
         <!-- Home Data -->
         <div class="home__data">
-            <h1 class="home__name">Hello, I’m Sara Abdallah</h1>
+          <span class="home__greeting">Hello, I am</span>
+          <h1 class="home__name">Sara ABDALLAH</h1>
+          <h3 class="home__education">Cloud & Cybersecurity Student — ISTQB + CU Certified</h3>
 
-            <p class="home__role">Cloud & Cybersecurity Student — ISTQB Certified</p>
+          <div class="home__buttons">
+            <a download="" href="css/CV_SARA_ABDALLAH.pdf" class="button button--download">
+              Download CV
+          </div>
+          <p class="home__description">
+            Passionate about Cloud Computing, Cybersecurity and Software
+            Testing. I build secure, scalable and well-designed projects.
+          </p>
 
-            <p class="home__description">
-                Passionate about Cloud Computing, Cybersecurity and Software Testing. I build secure, scalable and well-designed projects.
-            </p>
+          <a href="#contact" class="btn"> Let’s Talk </a>
 
-            <a href="#contact" class="btn">
-                Let’s Talk
+          <div class="home__buttons">
+            <a
+              download
+              href="assets/pdf/Sara-CV.pdf"
+              class="button button--download"
+            >
+              Download CV
             </a>
-
-            <div class="home__buttons">
-                <a download href="assets/pdf/Sara-CV.pdf" class="button button--download">
-                    Download CV
-                </a>
-                <a href="#about" class="button">
-                    About Me
-                </a>
-            </div>
+            <a href="#about" class="button"> About Me </a>
+          </div>
         </div>
 
         <!-- Home Image -->
         <div class="home__handle">
-            <img src="img/perfil.png" alt="Sara Abdallah" class="home__img" />
+          <img src="img/perfil.png" alt="Sara Abdallah" class="home__img" />
         </div>
 
         <!-- Home Social Links -->
         <div class="home__social">
-            <a href="https://www.linkedin.com/" class="home__social-link" target="_blank">
-                <i class="bx bxl-linkedin-square"></i>
-            </a>
-            <a href="https://github.com/" class="home__social-link" target="_blank">
-                <i class="bx bxl-github"></i>
-            </a>
-            <a href="https://dribbble.com/" class="home__social-link" target="_blank">
-                <i class="bx bxl-dribbble"></i>
-            </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="home__social-link"
+            target="_blank"
+          >
+            <i class="bx bxl-linkedin-square"></i>
+          </a>
+          <a
+            href="https://github.com/"
+            class="home__social-link"
+            target="_blank"
+          >
+            <i class="bx bxl-github"></i>
+          </a>
+          <a
+            href="https://dribbble.com/"
+            class="home__social-link"
+            target="_blank"
+          >
+            <i class="bx bxl-dribbble"></i>
+          </a>
         </div>
+      </div>
 
-    </div>
-
-<!-- Scroll Down Link -->
-<a href="#about" class="home__scroll">
-    <i class='bx bx-mouse home__scroll-icon'></i>
-    <span class="home__scroll-name">Scroll Down</span>
-</a>
+      <!-- Scroll Down Link -->
+      <a href="#about" class="home__scroll">
+        <i class="bx bx-mouse home__scroll-icon"></i>
+        <span class="home__scroll-name">Scroll Down</span>
+      </a>
     </section>
 
     <!--=============== ABOUT ===============-->
     <section class="about section fade-in" id="about">
-        <h2>My Intro</h2>
-        <p>I am a 2nd year Cloud & Cybersecurity student at Esprit, ISTQB FL 4.0 certified. I work on cloud deployments (AWS, Terraform), cybersecurity analysis (Nmap, Wireshark) and software testing projects.</p>
+      <span class="section__subtitle">My Intro</span>
+      <h2 class="section__title">About Me</h2>
+
+      <div class="about__container container grid">
+        <div class="about__certifications">
+          <img src="img/CU-certified-cloud-Test-Practitioner-Foundation-level-ctp.png"
+               alt="Certified Cloud Test Practitioner"
+               class="about__img">
+      
+          <img src="img/istqb-certified-tester-foundation-level-ctfl.png"
+               alt="ISTQB Certified Tester Foundation Level"
+               class="about__img">
+         </div>
+  
+
+        <div class="about__data">
+          <div class="about__info">
+            <div class="about__box">
+              <i class="bx bx-award about__icon"></i>
+              <h3 class="about__title">Experience</h3>
+              <span class="about__subtitle">1+ Years Working</span>
+            </div>
+
+            <div class="about__box">
+              <i class="bx bx-briefcase-alt about__icon"></i>
+              <h3 class="about__title">Completed</h3>
+              <span class="about__subtitle">10 + Projects</span>
+            </div>
+
+            <div class="about__box">
+              <i class="bx bx-support about__icon"></i>
+              <h3 class="about__title">support</h3>
+              <span class="about__subtitle">Online 24/7</span>
+            </div>
+
+          
+
+            <div class="about__box">
+              <i class="bxd bx-certification about__icon"></i>
+              <h3 class="about__title">Certifications</h3>
+              <span class="about__subtitle">ISQB foundation level 4.0 </span>
+            </div>
+          </div>
+
+          <p class="about__description">
+            I'm Sara Abdallah, a dedicated Cloud & Cybersecurity student with a
+            passion for building secure and scalable projects. With over a year
+            of experience and ISTQB certification, I specialize in cloud
+            deployment, cybersecurity, and software testing. I thrive on
+            creating well-designed solutions that meet client needs.
+          </p>
+
+          <a href="#contact" class="button">Contact Me</a>
+        </div>
+
+        <div class="about__buttons">
+          <a
+            download
+            href="assets/pdf/Sara-CV.pdf"
+            class="button button--download"
+          >
+            Download CV
+          </a>
+        
+       
+        </div>
+      </div>
     </section>
 
     <!--=============== SKILLS ===============-->
     <section class="skills section fade-in" id="skills">
-        <h2>My Skills</h2>
-       <div class="card">
-    <img src="img/project-img-1.jpg" alt="AWS Static Website">
-    <h3>AWS Static Website Deployment</h3>
-    <p>Cloud: AWS S3 + CloudFront using Terraform</p>
-    <a href="#" class="btn">View Project</a>
-</div>
+      <h2>My Skills</h2>
+      <div class="card">
+        <img src="img/project-img-1.jpg" alt="AWS Static Website" />
+        <h3>AWS Static Website Deployment</h3>
+        <p>Cloud: AWS S3 + CloudFront using Terraform</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
 
-<div class="card">
-    <img src="img/project-img-2.jpg" alt="Local Network Audit">
-    <h3>Local Network Audit</h3>
-    <p>Cybersecurity: Network analysis using Nmap & Wireshark</p>
-    <a href="#" class="btn">View Report</a>
-</div>
+      <div class="card">
+        <img src="img/project-img-2.jpg" alt="Local Network Audit" />
+        <h3>Local Network Audit</h3>
+        <p>Cybersecurity: Network analysis using Nmap & Wireshark</p>
+        <a href="#" class="btn">View Report</a>
+      </div>
 
-<div class="card">
-    <img src="img/project-img-3.jpg" alt="API Testing">
-    <h3>API Testing</h3>
-    <p>Testing: Postman & Selenium automation</p>
-    <a href="#" class="btn">View Project</a>
-</div>
-
+      <div class="card">
+        <img src="img/project-img-3.jpg" alt="API Testing" />
+        <h3>API Testing</h3>
+        <p>Testing: Postman & Selenium automation</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
     </section>
 
     <!--=============== SERVICES ===============-->
     <section class="services section fade-in" id="services">
-        <h2>What I Do</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Cloud Deployment</h3>
-                <p>I set up and deploy cloud infrastructures using AWS and Terraform. Static hosting, S3, CloudFront, IAM, automation and secure architectures.</p>
-            </div>
-            <div class="card">
-                <h3>Cybersecurity</h3>
-                <p>Network analysis, vulnerability scanning, packet inspection, secure configuration and system hardening.</p>
-            </div>
-            <div class="card">
-                <h3>Software Testing</h3>
-                <p>ISTQB-based test analysis, API testing with Postman, UI automation with Selenium, and detailed coverage reports.</p>
-            </div>
+      <h2>What I Do</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Cloud Deployment</h3>
+          <p>
+            I set up and deploy cloud infrastructures using AWS and Terraform.
+            Static hosting, S3, CloudFront, IAM, automation and secure
+            architectures.
+          </p>
         </div>
+        <div class="card">
+          <h3>Cybersecurity</h3>
+          <p>
+            Network analysis, vulnerability scanning, packet inspection, secure
+            configuration and system hardening.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Software Testing</h3>
+          <p>
+            ISTQB-based test analysis, API testing with Postman, UI automation
+            with Selenium, and detailed coverage reports.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!--=============== PROJECTS ===============-->
     <section class="projects section fade-in" id="projects">
-        <h2>Recent Projects</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>AWS Static Website Deployment</h3>
-                <p>Cloud: AWS S3 + CloudFront using Terraform</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="card">
-                <h3>Local Network Audit</h3>
-                <p>Cybersecurity: Network analysis using Nmap & Wireshark</p>
-                <a href="#" class="btn">View Report</a>
-            </div>
-            <div class="card">
-                <h3>API Testing</h3>
-                <p>Testing: Postman & Selenium automation</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
+      <h2>Recent Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>AWS Static Website Deployment</h3>
+          <p>Cloud: AWS S3 + CloudFront using Terraform</p>
+          <a href="#" class="btn">View Project</a>
         </div>
+        <div class="card">
+          <h3>Local Network Audit</h3>
+          <p>Cybersecurity: Network analysis using Nmap & Wireshark</p>
+          <a href="#" class="btn">View Report</a>
+        </div>
+        <div class="card">
+          <h3>API Testing</h3>
+          <p>Testing: Postman & Selenium automation</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
     </section>
 
-   <!-- ============ CONTACT ============ -->
-<section class="contact section" id="contact">
+    <!-- ============ CONTACT ============ -->
+    <section class="contact section" id="contact">
+      <span class="section__subtitle">Get in touch</span>
+      <h2 class="section__title">Contact Me</h2>
 
-    <span class="section__subtitle">Get in touch</span>
-    <h2 class="section__title">Contact Me</h2>
+      <div class="contact__container container grid">
+        <!-- Contact Info -->
+        <div class="contact__content">
+          <h3 class="contact__title">Talk to me</h3>
 
-    <div class="contact__container container grid">
+          <div class="contact__info">
+            <!-- Email -->
+            <div class="contact__card">
+              <i class="bx bx-mail-send contact__card-icon"></i>
+              <h3 class="contact__card-title">Email</h3>
+              <span class="contact__card-data">saraabdallah.tun@gmail.com</span>
 
-       <!-- Contact Info -->
-<div class="contact__content">
-    <h3 class="contact__title">Talk to me</h3>
-
-    <div class="contact__info">
-
-        <!-- Email -->
-        <div class="contact__card">
-            <i class="bx bx-mail-send contact__card-icon"></i>
-            <h3 class="contact__card-title">Email</h3>
-            <span class="contact__card-data">saraabdallah.tun@gmail.com</span>
-
-            <a href="mailto:user@gmail.com" class="contact__button">
+              <a href="mailto:saraabdallah.tun@gmail.com" class="contact__button">
                 Write me
                 <i class="bx bx-right-arrow-alt contact__button-icon"></i>
-            </a>
-        </div>
+              </a>
+            </div>
 
-        <!-- Messenger -->
-        <div class="contact__card">
-            <i class="bx bxl-messenger contact__card-icon"></i>
-            <h3 class="contact__card-title">Messenger</h3>
-            <span class="contact__card-data">Sara Abdallah</span>
+            <!-- Messenger -->
+            <div class="contact__card">
+              <i class="bx bxl-messenger contact__card-icon"></i>
+              <h3 class="contact__card-title">Messenger</h3>
+              <span class="contact__card-data">Sara Abdallah</span>
 
-            <a
+              <a
                 href="https://m.me/sara.abd.277801"
                 target="_blank"
                 class="contact__button"
-            >
+              >
                 Write me
                 <i class="bx bx-right-arrow-alt contact__button-icon"></i>
-            </a>
-        </div>
+              </a>
+            </div>
 
-        <!-- WhatsApp -->
-        <div class="contact__card">
-            <i class="bx bxl-whatsapp contact__card-icon"></i>
-            <h3 class="contact__card-title">WhatsApp</h3>
-            <span class="contact__card-data">+216 23120650</span>
+            <!-- WhatsApp -->
+            <div class="contact__card">
+              <i class="bx bxl-whatsapp contact__card-icon"></i>
+              <h3 class="contact__card-title">WhatsApp</h3>
+              <span class="contact__card-data">+216 23120650</span>
 
-            <a
+              <a
                 href="https://wa.me/21623120650"
                 target="_blank"
                 class="contact__button"
-            >
+              >
                 Write me
                 <i class="bx bx-right-arrow-alt contact__button-icon"></i>
-            </a>
+              </a>
+            </div>
+          </div>
         </div>
-
-    </div>
-</div>
-
 
         <!-- Contact Form -->
         <div class="contact__content">
-            <h3 class="contact__title">Write me your project</h3>
+          <h3 class="contact__title">Write me your project</h3>
 
-            <form action="" class="contact__form">
+          <form action="" class="contact__form">
+            <div class="contact__form-div">
+              <label class="contact__form-tag">Name</label>
+              <input
+                type="text"
+                placeholder="Insert your name"
+                class="contact__form-input"
+              />
+            </div>
 
-                <div class="contact__form-div">
-                    <label class="contact__form-tag">Name</label>
-                    <input
-                        type="text"
-                        placeholder="Insert your name"
-                        class="contact__form-input"
-                    />
-                </div>
+            <div class="contact__form-div">
+              <label class="contact__form-tag">Mail</label>
+              <input
+                type="email"
+                placeholder="Insert your email"
+                class="contact__form-input"
+              />
+            </div>
 
-                <div class="contact__form-div">
-                    <label class="contact__form-tag">Mail</label>
-                    <input
-                        type="email"
-                        placeholder="Insert your email"
-                        class="contact__form-input"
-                    />
-                </div>
+            <div class="contact__form-div contact__form-area">
+              <label class="contact__form-tag">Project</label>
+              <textarea
+                cols="30"
+                rows="10"
+                placeholder="Write your project"
+                class="contact__form-input"
+              ></textarea>
+            </div>
 
-                <div class="contact__form-div contact__form-area">
-                    <label class="contact__form-tag">Project</label>
-                    <textarea
-                        cols="30"
-                        rows="10"
-                        placeholder="Write your project"
-                        class="contact__form-input"
-                    ></textarea>
-                </div>
-
-                <button type="submit" class="btn">
-                    Send Message
-                </button>
-
-            </form>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
         </div>
-
-    </div>
-
-</section>
-
+      </div>
+    </section>
 
     <!--=============== SCROLL UP BUTTON ===============-->
     <a href="#home" class="scrollup" id="scroll-up">&#8679;</a>
 
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
-
-
-
-
-
-
-
