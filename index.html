@@ -22,6 +22,7 @@
     <script src="js/main.js" defer></script>
   </head>
   <body>
+   
     <!--=============== HEADER / NAVIGATION ===============-->
     <header id="header">
       <nav class="nav container">
@@ -667,13 +668,15 @@
                 />
               </div>
 
-              <div class="contact__form-div">
+              <div class="contact__form-div" novalidate>
                 <label class="contact__form-tag">Mail</label>
                 <input
-                  type="email"
-                  placeholder="Insert your email"
-                  class="contact__form-input"
+                type="text"
+                placeholder="Insert your email"
+                class="contact__form-input"
+                id="contact-email"
                 />
+                <span class="contact__form-error-message"></span>
               </div>
 
               <div class="contact__form-div contact__form-area">
