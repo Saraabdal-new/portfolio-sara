@@ -23,6 +23,10 @@
   --font-medium: 500;
   --font-semi-bold: 600;
 
+  /*========== Colors CHANGE MODE ==========*/
+  /* purple: hsl(250, 66%, 75%)
+     blue: hsl(207, 66%, 72%) 
+  */
   /*========== Colors ==========*/
   --first-hue: 250;
   --sat: 66%;
@@ -1175,6 +1179,114 @@ img {
   .work__container {
     grid-template-columns: repeat(2, max-content);
   }
+  .contact__container {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    column-gap: 3rem;
+  }
 }
 
 /* For Large devices */
+@media screen and (min-width: 992px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section {
+    padding: 6.5rem 0 1rem;
+  }
+
+  .section__title {
+    margin-bottom: 3.5rem;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1rem);
+  }
+
+  .home__handle {
+    width: 290px;
+    height: 400px;
+  }
+
+  .home__img {
+    width: 400px;
+  }
+  .home__social-link {
+    padding: 0.4rem;
+    font-size: 1.25rem;
+  }
+  .home__social::after {
+    transform: rotate(90deg) translate(16px, 0);
+  }
+  .home__scroll-icon {
+    font-size: 2rem;
+  }
+
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 4rem;
+  }
+  .about__img {
+    width: 260px;
+  }
+  .about__certifications {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+  .about__data {
+    text-align: initial;
+  }
+  .about__info {
+    justify-content: initial;
+  }
+  .about__box {
+    text-align: center;
+    padding: 1rem 1.25rem;
+  }
+  .about__description {
+    padding: 0 4rem 0 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .skills__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* ✅ side by side */
+    column-gap: 3rem;
+    padding: 3rem;
+  }
+
+  .services__container {
+    grid-template-columns: repeat(4, 192px);
+    column-gap: 3rem;
+  }
+  .services__card {
+    padding: 5rem 2rem 1.5rem;
+  }
+
+  .work__container {
+    gap: 3rem;
+  }
+  .work__card {
+    padding: 1.25rem;
+  }
+  .work__img {
+    margin-bottom: 1rem;
+  }
+  .work__title {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact__container {
+    column-gap: 6rem;
+  }
+
+  .footer__social-link {
+    font-size: 2rem;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+  }
+}
