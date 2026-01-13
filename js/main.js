@@ -219,3 +219,23 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+
+
+/*=============== show custom error ===============*/
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".contact__form");
+  const emailInput = document.getElementById("contact-email");
+  const errorMessage = document.querySelector(".contact__form-error-message");
+
+  form.addEventListener("submit", function (e) {
+    errorMessage.textContent = "";
+    errorMessage.classList.remove("show");
+  
+    if (!emailInput.value.includes("@") || !emailInput.value.includes(".")) {
+      e.preventDefault();
+      errorMessage.textContent = "Please insert a valid email";
+      errorMessage.classList.add("show");
+    }
+  });
+});
