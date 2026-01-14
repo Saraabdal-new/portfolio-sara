@@ -615,8 +615,30 @@ img {
 }
 
 .about__description {
+  width: 100%;
+  max-width: 600px;
+
+  background-color: rgba(22, 27, 34, 0.7);
+
+  padding: 2rem 1.5rem; /* unified padding */
   margin-bottom: 2rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr; /* single column */
+  gap: 2rem;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.about__description:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+
 
 /* ================= SKILLS ================= */
 .skills__container {
@@ -1156,7 +1178,7 @@ img {
 /*================== BREAKPOINTS============= */
 
 /* For small devices */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 575px) {
   .nav__menu {
     padding: 1rem 1.5rem;
   }
@@ -1193,12 +1215,14 @@ img {
 
 /* For medium devices */
 @media screen and (min-width: 576px) {
-  .about.info {
-    grid-template-columns: repeat(3, 140px);
+  .about__info {
+    grid-template-columns: repeat(4, 120px);
     justify-content: center;
   }
   .about__description {
-    padding: 0 5rem;
+    max-width: 650px;
+    padding: 2rem 2.5rem;
+    margin: 0 auto 2.5rem;
   }
 
   .skills__container {
@@ -1212,7 +1236,7 @@ img {
     grid-template-columns: repeat(2, 160px);
     justify-content: center;
   }
-  .services__model-content {
+  .services__modal-content {
     width: 500px;
     padding: 4.5rem 2.5rem 2.5rem;
   }
@@ -1226,6 +1250,7 @@ img {
   .work__img {
     width: 295px;
   }
+  
 
   .contact__info {
     grid-template-columns: 300px;
@@ -1233,6 +1258,7 @@ img {
   }
 
   .contact__form {
+    max-width: 100%;
     width: 360px;
     margin: 0 auto;
   }
@@ -1242,10 +1268,14 @@ img {
     grid-template-columns: repeat(2, max-content);
   }
   .contact__container {
-    grid-template-columns: repeat(2, max-content);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* equal width columns */
+    gap: 2rem; /* spacing between form and info */
     justify-content: center;
-    column-gap: 6rem;
+    max-width: 900px; /* optional limit for container */
+    margin: 0 auto;
   }
+  
 }
 
 /* For Large devices */
@@ -1309,10 +1339,7 @@ img {
     text-align: center;
     padding: 1rem 1.25rem;
   }
-  .about__description {
-    padding: 0 4rem 0 0;
-    margin-bottom: 2.5rem;
-  }
+  
 
   .skills__container {
     display: grid;
@@ -1343,7 +1370,10 @@ img {
   }
 
   .contact__container {
-    column-gap: 6rem;
+    grid-template-columns: 1fr 1fr; /* equal two-column layout */
+    column-gap: 4rem; /* more spacing */
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .footer__social-link {
