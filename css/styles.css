@@ -134,6 +134,9 @@ img {
 
 /*=============== THEME ===============*/
 .change-theme {
+  position: fixed;
+  top: 2.5rem;
+  right: 1.5rem;
   font-size: 1.25rem;
   cursor: pointer;
   transition: 0.3s;
@@ -150,7 +153,7 @@ body.light-theme {
   --body-color: #ffffff; /* main background */
   --container-color: #d2c1f8; /* cards, boxes background */
   --first-color: #9629e8;
-  background-image: url("../img/W-background2.jpg"); /* your light mode video/image */
+  background-image: url("../img/W-background2.jpg"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
