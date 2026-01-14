@@ -183,6 +183,12 @@ body.light-theme .work__card {
   background-color: rgba(255, 255, 255, 0.3); /* more visible in light mode */
   border: 2px solid rgba(0, 0, 0, 0.2);
 }
+/* about description */
+body.light-theme .about__description {
+  background-color: rgba(255, 255, 255, 0.3); /* more visible in light mode */
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
 
 /* contact form */
 body.light-theme .contact__form-input,
@@ -1265,7 +1271,12 @@ img {
 }
 @media screen and (min-width: 767px) {
   .work__container {
-    grid-template-columns: repeat(2, max-content);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* equal width columns */
+    gap: 2rem; /* spacing between form and info */
+    justify-content: center;
+    max-width: 900px; /* optional limit for container */
+    margin: 0 auto;
   }
   .contact__container {
     display: grid;
